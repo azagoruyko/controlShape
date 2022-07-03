@@ -20,6 +20,7 @@
 #include <maya/MViewport2Renderer.h>
 #include <maya/MHardwareRenderer.h>
 #include <maya/MGLFunctionTable.h>
+#include <maya/M3dView.h>
 
 #include "controlShape.h"
 
