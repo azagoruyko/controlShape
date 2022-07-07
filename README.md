@@ -32,8 +32,9 @@ def makeControlShape():
         sh.meshMatrix.set(mesh.getParent().wm.get())
         
     elif ls:
-        #pm.connectAttr(ls[0].outMesh, sh.mesh)
-        sh.getParent().setMatrix(ls[0].getMatrix())
+        pm.connectAttr(ls[0].outMesh, sh.mesh)
+        pm.disconnectAttr(ls[0].outMesh, sh.mesh)
+        sh.getParent().setMatrix(ls[0].wm.get())
         
 def parentControlShape():
     ls = pm.ls(sl=True)
