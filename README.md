@@ -29,10 +29,10 @@ def makeControlShape():
     
         indices = [f.index() for f in faces]        
         sh.meshFaces.set(indices, type="Int32Array")
-        sh.meshMatrix.set(mesh.getParent().getMatrix())
+        sh.meshMatrix.set(mesh.getParent().wm.get())
         
     elif ls:
-        pm.connectAttr(ls[0].outMesh, sh.mesh)
+        #pm.connectAttr(ls[0].outMesh, sh.mesh)
         sh.getParent().setMatrix(ls[0].getMatrix())
         
 def parentControlShape():
